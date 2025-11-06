@@ -1,0 +1,8 @@
+__pycache__/
+/lightning_logs/
+/logs/
+/outputs/
+/.idea/
+/bop_toolkit/
+/datasets/*
+!/datasets/predefined_poses

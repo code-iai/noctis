@@ -1,0 +1,26 @@
+root_dir: ${machine.root_dir}/datasets/
+source_url: https://huggingface.co/datasets/bop-benchmark/datasets/resolve/main/
+unzip_mode: unzip
+
+reference_dataloader:
+  _target_: src.dataloader.bop.BOPTemplate
+  template_dir: ${machine.root_dir}/datasets/
+  obj_ids:
+  predefined_poses_dir: ${machine.root_dir}/predefined_poses/ico
+  level_templates: 0
+  max_level_templates: 2
+  pose_distribution: all
+  processing_config:
+    image_size: ${model.descriptor_model.image_size}
+    max_num_scenes: 10 # config for reference frames selection
+    max_num_frames: 500
+    min_visib_fract: 0.8
+    num_references: 200 
+    use_visible_mask: True
+
+query_dataloader:
+  _target_: src.dataloader.bop.BaseBOPTest
+  root_dir: ${machine.root_dir}/datasets/
+  split:
+  load_depth: False
+  reset_metadata: True

@@ -1,0 +1,12 @@
+_target_: src.model.grounded_sam.GroundedSAM.load_grounded_sam_model
+checkpoints_dir: ${machine.root_dir}/checkpoints
+grounded_dino_config_dir: ./src/cfg/gdino
+grounded_dino_use_vitb: False
+box_threshold: 0.1
+text_threshold: 0.1
+use_yolo_sam: False
+sam_vit_model: vit_t
+mask_threshold: 0.01
+prompt_text: objects
+segmentor_width_size: ${model.segmentor_width_size}
+device: ${machine.trainer.accelerator}

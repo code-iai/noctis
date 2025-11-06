@@ -1,0 +1,19 @@
+defaults:
+  - user: default
+  - machine: local
+  - callback: base
+  - data: bop
+  - model: grounded_sam
+  - _self_
+#  - override hydra/hydra_logging: disabled
+#  - override hydra/job_logging: disabled
+
+hydra:
+  output_subdir: null
+  run:
+    dir: logs
+
+name_exp: noctis
+dataset_name:
+template_dir: templates
+save_dir: ${machine.root_dir}/results/${name_exp}

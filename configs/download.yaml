@@ -1,0 +1,23 @@
+defaults:
+  - user: default
+  - machine: local
+  - data: bop
+  - _self_
+#  - override hydra/hydra_logging: disabled
+#  - override hydra/job_logging: disabled
+
+hydra:
+  output_subdir: null
+  run:
+    dir: logs
+
+level: 2
+separated_poses_per_object: False
+disable_output: False
+num_workers: 6
+gpus: "0"
+dataset_name:
+renderer: "pyrender"
+recenter_objects: False
+with_depth: False
+template_dir: templates

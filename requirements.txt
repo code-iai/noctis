@@ -1,0 +1,17 @@
+numpy~=1.24.1
+scipy
+pandas
+tqdm
+pytorch-lightning
+pyrender
+blenderproc~=2.7.1
+opencv-python
+distinctipy
+omegaconf
+hydra-core
+hydra-colorlog
+ultralytics>=8.3.100, <=8.3.186
+trimesh
+requests
+pillow~=10.3.0
+huggingface_hub

@@ -1,0 +1,15 @@
+name: local
+
+# specific attributes to this machine
+#batch_size: 16
+#num_workers: 10
+batch_size: 1
+num_workers: 4  # set to 0 when debugging
+
+
+# Define trainer, datasets
+defaults:
+  - trainer: local
+
+dryrun: True
+root_dir: ${user.local_root_dir}
